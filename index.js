@@ -1,26 +1,20 @@
 require("dotenv").config();
 const serverless = require("serverless-http");
 const express = require("express");
-const request = require("request");
+const fetch = require("node-fetch");
+const cors = require("cors");
 
-const app = express();
 const API_URL = process.env.API_URL;
-
-const getApiResults = (url) => {
-  return new Promise((resolve, reject) => {
-    request(url, { json: true }, (err, res, body) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(body);
-    });
-  });
-};
+const app = express();
+app.use(cors());
 
 app.get("/ialsearch", function (req, res) {
   const params = new URLSearchParams(req.query).toString();
-  getApiResults(`${API_URL}/ialsearch?${params}`)
-    .then((data) => res.json(data))
+  fetch(`${API_URL}/ialsearch?${params}`)
+    .then((data) => data.json())
+    .then((json) => {
+      res.json(json);
+    })
     .catch((err) =>
       res.json({
         error: {
@@ -32,8 +26,11 @@ app.get("/ialsearch", function (req, res) {
 
 app.get("/ialsuggest", function (req, res) {
   const params = new URLSearchParams(req.query).toString();
-  getApiResults(`${API_URL}/ialsuggest?${params}`)
-    .then((data) => res.json(data))
+  fetch(`${API_URL}/ialsuggest?${params}`)
+    .then((data) => data.json())
+    .then((json) => {
+      res.json(json);
+    })
     .catch((err) =>
       res.json({
         error: {

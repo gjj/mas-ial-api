@@ -1,5 +1,6 @@
 service: mas-ial-api
 
+useDotenv: true
 provider:
   name: aws
   runtime: nodejs12.x
@@ -10,9 +11,8 @@ functions:
   app:
     handler: index.handler
     events:
-      - http:
-          path: /ialsearch
-          method: GET
+      - http: ANY /
+      - http: 'ANY /{proxy+}'
 
 plugins:
   - serverless-offline

@@ -4,7 +4,7 @@
 
 The [MAS Investor Alert List](https://www.mas.gov.sg/investor-alert-list) is a list of unregulated persons (in Singapore and overseas) who, based on information received by MAS, may have been wrongly perceived as being licensed or authorised by MAS.
 
-While the MAS Investor Alert List is available for the public to search, there isn't a publicly available API. Hence, the original APIs do not have CORS enabled.
+While the MAS Investor Alert List is available for the public to search, the APIs on the page itself are not meant for the public and hence, the original APIs do not have CORS enabled.
 
 This Node.js app provides CORS-enabled endpoints that proxies through the original MAS IAL APIs. However, it's not supported by the MAS and no SLA is provided. More of a personal project for me to learn Serverless and configuring ESLint, etc.
 
@@ -21,7 +21,9 @@ You can just call the API endpoint as if you are calling the actual MAS IAL API.
 - `json.nl` must be set to `map`
 - `wt` should be set to `json`
 - `sort` 
-- `q`
+- `q` is the search term, wrap the search term in `*` for wildcard search
+- `rows`
+- `start` is the offset
 
 ## Stack
 

@@ -1,0 +1,43 @@
+{
+  "name": "mas-ial-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . && echo 'Lint complete.'",
+    "lint:fix": "eslint --fix . && echo 'Lint fix complete.'",
+    "commitlint-circle": "commitlint-circle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjj/mas-ial-api.git"
+  },
+  "author": "Goi Jia Jian",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gjj/mas-ial-api/issues"
+  },
+  "homepage": "https://github.com/gjj/mas-ial-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
+    "@commitlint/prompt": "12.0.1",
+    "@ls-age/commitlint-circle": "1.0.0",
+    "aws-sdk": "^2.879.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "2.2.1",
+    "serverless": "^2.33.0",
+    "serverless-dotenv-plugin": "^3.9.0",
+    "serverless-offline": "^6.8.0"
+  }
+}

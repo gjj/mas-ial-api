@@ -25,6 +25,15 @@ You can just call the API endpoint as if you are calling the actual MAS IAL API.
 - `rows`
 - `start` is the offset
 
+```
+/ialsuggest?wt=json&suggest.count=10&q=*query*
+```
+
+- `wt`
+- `suggest.count`
+- `q` is the search term, wrap the search term in `*` for wildcard search
+
+
 ## Stack
 
 - Serverless

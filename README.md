@@ -1,6 +1,6 @@
 # MAS Investor Alert List API
 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gjj/mas-ial-api)
+[![CircleCI](https://circleci.com/gh/gjj/mas-ial-api.svg?style=svg)](https://circleci.com/gjj/mas-ial-api)
 
 The [MAS Investor Alert List](https://www.mas.gov.sg/investor-alert-list) is a list of unregulated persons (in Singapore and overseas) who, based on information received by MAS, may have been wrongly perceived as being licensed or authorised by MAS.
 
